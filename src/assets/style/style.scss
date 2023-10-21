@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+@import './components/main';
+@import './components/header';
+@import './components/contact-card';
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.ant-input-prefix {
+    svg {
+        color: #8a8a8a;
+    }
+}
