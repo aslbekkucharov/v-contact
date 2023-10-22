@@ -5,7 +5,7 @@
             <h2 class="mb-0 text-slate-500 font-medium">Список контактов</h2>
 
             <div class="flex gap-4 w-1/3">
-                <a-input v-model:value="searchKey" placeholder="Поиск" size="large">
+                <a-input v-model:value="searchKey" :placeholder="searchInputPlaceholder" size="large">
                     <template v-slot:addonAfter>
                         <a-select v-model:value="searchBy" :options="options"  size="large">
                             <template v-slot:suffixIcon>
@@ -65,8 +65,9 @@ const filteredContacts = computed(() => {
     }
 })
 
-function onSearch(): void {
 
-}
+const searchInputPlaceholder = computed(() => {
+    return 'Поиск ' + options.value?.filter(options => options.value === searchBy.value)[0].label.toLowerCase()
+})
 
 </script>
