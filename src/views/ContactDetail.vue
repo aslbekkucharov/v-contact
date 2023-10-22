@@ -5,19 +5,19 @@
 
             <div class="mb-5 flex flex-col gap-2">
                 <span class="flex items-center gap-2">
-                    <span class="text-xl text-slate-950">Ф.И.О:</span>
-                    <span class="text-xl text-slate-500">{{ contact.name }}</span>
+                    <span class="text-lg sm:text-xl text-slate-950">Ф.И.О:</span>
+                    <span class="text-lg sm:text-xl text-slate-500">{{ contact.name }}</span>
                 </span>
                 <span class="flex items-center gap-2">
-                    <span class="text-xl text-slate-950">E-mail:</span>
-                    <span class="text-xl text-slate-500">{{ contact.email }}</span>
+                    <span class="text-lg sm:text-xl text-slate-950">E-mail:</span>
+                    <span class="text-lg sm:text-xl text-slate-500">{{ contact.email }}</span>
                 </span>
                 <span class="flex items-center gap-2">
-                    <span class="text-xl text-slate-950">Номер телефона:</span>
-                    <span class="text-xl text-slate-500">{{ contact.phone }}</span>
+                    <span class="text-lg sm:text-xl text-slate-950">Номер телефона:</span>
+                    <span class="text-lg sm:text-xl text-slate-500">{{ contact.phone }}</span>
                 </span>
                 <span class="flex items-center gap-2">
-                    <span class="text-xl text-slate-950">Теги:</span>
+                    <span class="text-lg sm:text-xl text-slate-950">Теги:</span>
                     <span class="contact-card-tags">
                         <span v-for="(tag, index) in contactTags" :key="index" class="contact-card-tag">
                             <span class="contact-card-tag__text">{{ tag }}</span>

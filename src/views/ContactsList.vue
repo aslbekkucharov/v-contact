@@ -1,10 +1,10 @@
 <template>
     <div v-if="contacts?.length" class="container">
 
-        <div class="mb-8 flex items-center justify-between">
-            <h2 class="mb-0 text-slate-500 font-medium">Список контактов</h2>
+        <div class="mb-8 flex flex-col sm:flex-row sm:items-center justify-between">
+            <h2 class="sm:mb-0 mb-4 text-slate-500 font-medium">Список контактов</h2>
 
-            <div class="flex gap-4 w-1/3">
+            <div class="flex gap-4 md:w-1/3">
                 <a-input v-model:value="searchKey" :placeholder="searchInputPlaceholder" size="large">
                     <template v-slot:addonAfter>
                         <a-select v-model:value="searchBy" :options="options"  size="large">

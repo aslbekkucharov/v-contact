@@ -14,11 +14,20 @@ body {
 
 .container {
     margin: 0 auto;
+    padding: 0 15px;
     max-width: 1440px;
 }
 
 .ant-input-prefix {
     svg {
         color: #8a8a8a;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        h2 {
+            font-size: 22px;
+        }
     }
 }
