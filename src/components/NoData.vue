@@ -5,7 +5,7 @@
             <img :src="noDataImage" alt="">
         </div>
 
-        <h2 class="text-slate-500 font-medium max-w-md text-center">{{ text }}</h2>
+        <h2 class="text-slate-500 font-medium max-w-sm sm:max-w-md text-center text-lg sm:text-xl">{{ text }}</h2>
     </div>
 </template>
 
