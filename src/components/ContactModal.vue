@@ -30,6 +30,7 @@
 </template>
 
 <script setup lang="ts">
+import { message } from 'ant-design-vue';
 import { generateUniqueId } from '@/shared'
 import type { ContactModelType } from '@/types'
 import { computed, reactive, defineEmits, watch } from 'vue'
@@ -81,10 +82,26 @@ function resetForm(): void {
     form.tags = ''
 }
 
-function onOkPress(): void {
-    emit('okButtonPress', form)
-    isModalVisible.value = false
-    isEditing.value ? '' : resetForm()
+function isValid(): boolean {
+    if (!form.name || !form.phone) {
+        message.error('Поля Ф.И.О контакта и номер контакта обязательны')   
+        return false
+    }
+
+    return true
+}
+
+function onOkPress(): void | boolean {
+
+    if (!isValid()) {
+
+        return false
+
+    } else {
+        emit('okButtonPress', form)
+        isModalVisible.value = false
+        isEditing.value ? '' : resetForm()        
+    }
 }
 
 watch(isModalVisible, (newValue) => {

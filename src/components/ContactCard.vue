@@ -13,11 +13,11 @@
                 <span class="contact-card-item__key">Номер телефона: </span>
                 <span class="contact-card-item__val">{{ contact.phone }}</span>
             </span>
-            <span class="contact-card-item">
+            <span v-if="contact.email" class="contact-card-item">
                 <span class="contact-card-item__key">E-mail: </span>
                 <span class="contact-card-item__val">{{ contact.email }}</span>
             </span>
-            <span class="contact-card-item">
+            <span v-if="contact.tags.length" class="contact-card-item">
                 <span class="contact-card-item__key">Теги: </span>
                 <span class="contact-card-tags">
                     <span v-for="(tag, index) in contactTags" :key="index" class="contact-card-tag">

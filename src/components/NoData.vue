@@ -13,7 +13,10 @@
 import noDataImage from '@/assets/img/no-data.svg'
 
 defineProps({
-    text: String
+    text: {
+        type: String,
+        required: true
+    }
 })
 
 </script>

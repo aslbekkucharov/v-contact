@@ -69,7 +69,9 @@ const contactIndex: number = contacts?.findIndex(c => c.id === route.params.id)
 
 const isModalVisible = ref<boolean>(false)
 
-const contactTags = contact.value?.tags.split(',').map(el => el.trim())
+const contactTags = computed(() => {
+    return contact.value?.tags.split(',').map(el => el.trim())
+})
 
 function onContactDelete(): void {
 
